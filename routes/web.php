@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HelloController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::get('home', function (){
 */
 /*使用controller來回傳home頁面*/
 Route::get('home',[HomeController::class,"index"])->name("home.index");
+
+Route::get('hello/{name?}',[HelloController::class,"index"])->name("hello.index");
