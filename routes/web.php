@@ -27,3 +27,7 @@ Route::get('home', function (){
 Route::get('home',[HomeController::class,"index"])->name("home.index");
 
 Route::get('hello/{name?}',[HelloController::class,"index"])->name("hello.index");
+
+Route::get('home1', function (){
+    return view('home1');
+});
